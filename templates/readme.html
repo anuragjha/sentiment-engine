@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SentimentEngine Readme</title>
+</head>
+<body>
+    <h1>Readme</h1>
+    <hr/>
+    <p><pre>
+    1. /token POST
+    body - json
+    {
+        "name" : "admin"
+        "password" : "passAdmin"
+    }
+
+    => will receieve a token
+    {
+        "token" : "sdvsfvdfvsfvsdv something"
+    }
+    </pre></p>
+    <hr/>
+    <p><pre>
+    2. /sentiment POST
+    body - json
+    {
+        "sentence" : "OK a good day"
+    }
+
+    add token in the header
+    x-access-token -> token
+
+    => will receieve sentiment
+    {
+    "sentiment": {
+        "compound": 0.7717,
+        "negative": 0.0,
+        "neutral": 0.427,
+        "positive": 0.573
+        }
+    }
+    </pre></p>
+    <hr/>
+</body>
+</html>
